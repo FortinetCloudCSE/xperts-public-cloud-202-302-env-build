@@ -29,7 +29,7 @@ variable "user_principal_domain" {
   default     = ""
 }
 
-variable "public_cloud_202_group_object_id" {
+variable "public_cloud_group_object_id" {
   type    = string
   default = ""
 }

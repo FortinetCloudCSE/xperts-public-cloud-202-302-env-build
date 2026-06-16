@@ -20,11 +20,11 @@ module "module_public-cloud-202" {
 
   source = "./modules/azurerm"
 
-  location                         = local.location
-  rg_suffix                        = local.rg_suffix
-  username                         = each.value.username
-  vm_username                      = var.vm_username
-  password                         = local.password
-  user_principal_domain            = local.user_principal_domain
-  public_cloud_202_group_object_id = var.public_cloud_202_group_object_id
+  location                     = local.location
+  rg_suffix                    = local.rg_suffix
+  username                     = each.value.username
+  vm_username                  = var.vm_username
+  password                     = local.password
+  user_principal_domain        = local.user_principal_domain
+  public_cloud_group_object_id = var.public_cloud_group_object_id
 }

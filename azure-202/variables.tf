@@ -50,7 +50,7 @@ variable "user_principal_domain" {
   default     = ""
 }
 
-variable "public_cloud_202_group_object_id" {
+variable "public_cloud_group_object_id" {
   description = "The ID of the Entra ID group to add users to"
   type        = string
   default     = ""

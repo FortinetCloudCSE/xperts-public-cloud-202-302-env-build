@@ -173,7 +173,7 @@ resource "azuread_user" "user" {
 
 resource "azuread_group_member" "group_member" {
 
-  group_object_id  = var.public_cloud_202_group_object_id
+  group_object_id  = var.public_cloud_group_object_id
   member_object_id = azuread_user.user.object_id
 }
 
