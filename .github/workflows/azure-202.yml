@@ -6,7 +6,6 @@ on:
       UserNamePrefix:
         description: 'Prefix for the usernames, this will also be used for the state file and resource group naming.'
         required: true
-        default: ''
         type: string
       UserCount:
         description: 'Number of users and environments to deploy (1-99), recommend only 15 per run. A count of 0 will destroy all users and environments.'
@@ -18,11 +17,22 @@ on:
         required: false
         default: '20'
         type: string
+      TerraformApply:
+        description: 'Terraform Apply, if false only the Terraform Plan will be executed (true/false)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - false
+          - true
       RunTAP:
         description: 'Create Temporary Access Passes for new users (true/false)'
         required: false
         default: 'false'
-        type: string
+        type: choice
+        options:
+          - false
+          - true
 jobs:
   ENV_BUILD:
     permissions:
@@ -84,6 +94,7 @@ jobs:
           TF_VAR_public_cloud_group_object_id: ${{ secrets.AZURE_PUBLIC_CLOUD_GROUP_OBJECT_ID }}
 
       - name: Terraform Apply
+        if: (github.event.inputs.TerraformApply == 'true')
         id: apply
         working-directory: ./azure-202
         run: terraform apply -auto-approve -parallelism=20 -no-color tfplan
