@@ -113,7 +113,7 @@ jobs:
       - name: Terraform Output
         id: output
         working-directory: ./azure-202
-        run: terraform output bastion_shareable_link -no-color
+        run: terraform output -no-color
 
       - name: Azure Re-Login
         if: (github.event.inputs.RunTAP == 'true')
