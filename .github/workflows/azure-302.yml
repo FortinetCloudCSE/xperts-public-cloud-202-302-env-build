@@ -92,7 +92,7 @@ jobs:
           TF_VAR_password: ${{ vars.ENV_BASIC_PASSWORD }}
           TF_VAR_user_principal_domain: ${{ vars.ENV_USER_PRINCIPAL_DOMAIN }}
           TF_VAR_public_cloud_group_object_id: ${{ secrets.AZURE_PUBLIC_CLOUD_GROUP_OBJECT_ID }}
-          TF_VAR_fortiflexvm_config_id: ${{ secrets.FORTIFLEXVM_CONFIG_ID }}
+          TF_VAR_fortiflexvm_config_ids: ${{ vars.ENV_FORTIFLEXVM_CONFIG_IDS }}
           TF_VAR_fortiflexvm_program_serial_number: ${{ secrets.FORTIFLEXVM_PROGRAM_SERIAL_NUMBER }}
           TF_VAR_fortiflex_access_username: ${{ secrets.FORTIFLEX_ACCESS_USERNAME }}
           TF_VAR_fortiflex_access_password: ${{ secrets.FORTIFLEX_ACCESS_PASSWORD }}
@@ -114,7 +114,7 @@ jobs:
           TF_VAR_password: ${{ vars.ENV_BASIC_PASSWORD }}
           TF_VAR_user_principal_domain: ${{ vars.ENV_USER_PRINCIPAL_DOMAIN }}
           TF_VAR_public_cloud_group_object_id: ${{ secrets.AZURE_PUBLIC_CLOUD_GROUP_OBJECT_ID }}
-          TF_VAR_fortiflexvm_config_id: ${{ secrets.FORTIFLEXVM_CONFIG_ID }}
+          TF_VAR_fortiflexvm_config_ids: ${{ vars.ENV_FORTIFLEXVM_CONFIG_IDS }}
           TF_VAR_fortiflexvm_program_serial_number: ${{ secrets.FORTIFLEXVM_PROGRAM_SERIAL_NUMBER }}
           TF_VAR_fortiflex_access_username: ${{ secrets.FORTIFLEX_ACCESS_USERNAME }}
           TF_VAR_fortiflex_access_password: ${{ secrets.FORTIFLEX_ACCESS_PASSWORD }}
